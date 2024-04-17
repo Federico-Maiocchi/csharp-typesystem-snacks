@@ -6,17 +6,70 @@
         {
             //Console.WriteLine("Hello, World!");
 
+            //------------------------------
             //Snack 1
             //L’utente inserisce due numeri in successione.
             //Il software stampa il maggiore.
 
+            int numero1;
+            int numero2;
+
+            Console.WriteLine("Inserisci un numero");
+            numero1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Inserisci un altro numero");
+            numero2 = Convert.ToInt32(Console.ReadLine());
+
+            if (numero1 > numero2)
+            {
+                Console.WriteLine($"Il primo numero che hai scelto ({numero1}) è più grande rispetto il secondo ({numero2})");
+            }
+            else
+            {
+                Console.WriteLine($"Il secondo numero che hai scelto ({numero2}) è più grande rispetto il primo ({numero1})");
+            }
+
+            //------------------------------
             //Snack 2
             //L’utente inserisce due parole in successione.
             //Il software stampa prima la parola più corta, poi la parola più lunga.
 
+            Console.WriteLine("Inserisci una parola");
+            string parola1 = Console.ReadLine();
+
+            Console.WriteLine("Inserisci un'altra parola");
+            string parola2 = Console.ReadLine();
+
+            if (parola1.Length > parola2.Length)
+            {
+                Console.WriteLine($"Prola più piccola:  {parola2} (Seconda ad essere inserita)");
+                Console.WriteLine($"Parola più lunga: {parola1} (prima ad essere inserita)");
+            }
+            else
+            {
+                Console.WriteLine($"Prola più piccola: {parola1} (prima ad essere inserita)");
+                Console.WriteLine($"Parola più lunga: {parola2} (Seconda ad essere inserita)");
+            }
+
+
             //Snack 3
             //Il software deve chiedere per 10 volte all’utente di inserire un numero.
             //Il programma stampa la somma di tutti i numeri inseriti.
+
+            int totale = 0;
+
+            for (int i = 0; i < 10; i++ )
+            {
+                Console.WriteLine($"Inserisci un numero {i + 1}");
+                int numeroUser; 
+                numeroUser = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{i + 1} - numero scelto: {numeroUser}");
+
+                totale += numeroUser;
+
+            }
+
+            Console.WriteLine(totale);
 
             //Snack 4
             //Calcola la somma e la media dei numeri da 2 a 10.
